@@ -63,7 +63,7 @@ _G.ScriptTable = {
          Link = "https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"
       }
    },
-   ["Test Place"] = {
+   ["Test Place A"] = {
       {
          Show = "Pink Gui [PC | Recommend]",
          Link = "https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"
@@ -81,7 +81,7 @@ _G.GameTable = {
    { name = "King Legacy", id = 4520749081 },
    { name = "King Legacy", id = 6381829480 },
    { name = "Your Bizzare Adventure", id = 2809202155 },
-   { name = "Test Place", id = 7269990871 },
+   { name = "Test Place A", id = 7269990871 },
    --{ name = "Grand Piece Online", id = 5931540094 },
    --{ name = "King Legacy", id = 5931540094 }
 }
