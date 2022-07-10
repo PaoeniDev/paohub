@@ -7,10 +7,6 @@ _G.ScriptTable = {
       {
          Show = "Mukuro [PC]",
          Link = "https://raw.githubusercontent.com/xQuartyx/DonateMe/main/BF"
-      },
-      {
-         Show = "Mukuro [PC] Rec",
-         Link = "https://raw.githubusercontent.com/xQuartyx/DonateMe/main/BF"
       }
    },
    ["Demon Fall"] = {
