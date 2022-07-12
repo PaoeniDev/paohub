@@ -79,6 +79,10 @@ _G.ScriptTable = {
         {
          Show = "Trigon [PC | Fruit Notifier | Key System ]",
          Link = "https://raw.githubusercontent.com/ArponAG/Scripts/main/gpo.lua"
+        },
+        {
+         Show = "Auto OSU / Ken Haki v2 [PC | Recommend ]",
+         Link = "https://raw.githubusercontent.com/PaoBlox/paohub/main/paoautoosu.lua"
         }
      },
      ["Anime Dimension Simulator"] = {
