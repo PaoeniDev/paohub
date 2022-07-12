@@ -257,7 +257,7 @@ AutoOSU_GPO.Name = randomString()
 local player = game.Players.LocalPlayer
 
 local success, errorMsg = pcall(function()
-	getgenv().a = true
+	getgenv().a = false
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PaoBlox/paohub/main/autoosu.lua"))()
 end)
 if not success then
