@@ -6,7 +6,15 @@ _G.ScriptTable = {
        },
        {
           Show = "Mukuro [PC]",
-          Link = "https://raw.githubusercontent.com/xQuartyx/DonateMe/main/BF"
+          Link = "https://raw.githubusercontent.com/xQuartyx/DonateMe/main/NEWBF"
+       },
+       {
+          Show = "Chiba Hub [Mobile & PC | Recommend ]",
+          Link = "https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt"
+       },
+       {
+          Show = "Ripper Hub [PC | Recommend ]",
+          Link = "https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/Kaitun.txt"
        },
        {
           Show = "Chiba Hub [Mobile & PC | Recommend ]",
@@ -14,10 +22,6 @@ _G.ScriptTable = {
        }
     },
     ["Demon Fall"] = {
-       {
-          Show = "Lazy Hub",
-          Link = "https://github.com/LioK251/Scripts/raw/main/lazyhub.lua"
-       },
        {
           Show = "Ghost Fall [ Recommend ]",
           Link = "https://raw.githubusercontent.com/ghost-home/public/main/demonfall.lua"
@@ -90,6 +94,30 @@ _G.ScriptTable = {
            Show = "Sun Hub [PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/Besty191/MAZI/main/Anime%20Dimensions%20Simulator%20%7C%20Sun%20Hub"
         }
+     },
+     ["Mining Simulator 2"] = {
+        {
+           Show = "Vestra Hub [PC | Recommend ]",
+           Link = "https://script.vestrahub.com/"
+        }
+     },
+     ["Combat Warrior"] = {
+        {
+           Show = "Project Hook [PC | Recommend ]",
+           Link = "https://projecthook.xyz/scripts/new-free.lua"
+        },
+        {
+           Show = "Yellow Gui [PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/IsaaaKK/cwhb/main/cw.txt"
+        },
+        {
+           Show = "UwUware [PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/Jan5106/uwuware_final/main/main.lua"
+        },
+        {
+           Show = "Bird Hub [PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/scriptpastebin/raw/main/BirdCombatWarriors"
+        },
      }
  }
  
@@ -105,5 +133,7 @@ _G.ScriptTable = {
     { name = "Your Bizzare Adventure", id = 2809202155 },
     { name = "Grand Piece Online", id = 1 },
     { name = "Anime Dimension Simulator", id = 1 },
+    { name = "Mining Simulator 2", id = 9551640993 },
+    { name = "Combat Warrior", id = 1 }
     --{ name = "King Legacy", id = 5931540094 }
  }
