@@ -118,6 +118,16 @@ _G.ScriptTable = {
            Show = "Bird Hub [PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/scriptpastebin/raw/main/BirdCombatWarriors"
         },
+     },
+     ["Project Slayers"] = {
+        {
+           Show = "Flare Hub [ PC ]",
+           Link = "https://raw.githubusercontent.com/1f0yt/community/master/new"
+        },
+        {
+           Show = "Keybrew Hub [PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/Main"
+        }
      }
  }
  
@@ -134,6 +144,6 @@ _G.ScriptTable = {
     { name = "Grand Piece Online", id = 1 },
     { name = "Anime Dimension Simulator", id = 1 },
     { name = "Mining Simulator 2", id = 9551640993 },
-    { name = "Combat Warrior", id = 1 }
-    --{ name = "King Legacy", id = 5931540094 }
+    { name = "Combat Warrior", id = 1 },
+    { name = "Project Slayers", id = 6152116144 }
  }
