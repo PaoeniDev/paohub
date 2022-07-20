@@ -127,6 +127,10 @@ _G.ScriptTable = {
         {
            Show = "Keybrew Hub [PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/Main"
+        },
+        {
+           Show = "LeadMarker [PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"
         }
      }
  }
