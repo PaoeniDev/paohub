@@ -258,7 +258,6 @@ local player = game.Players.LocalPlayer
 
 local success, errorMsg = pcall(function()
 	getgenv().a = false
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PaoBlox/paohub/main/autoosu.lua"))()
 end)
 if not success then
 	player:Kick("Error while load script!, use other executor or rejoin!")
@@ -334,10 +333,12 @@ end)
 Activation.MouseButton1Click:Connect(function()
 	if getgenv().a == true then
 		getgenv().a = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/GPO-AutoOsu.lua"))()
 		Activation.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		Activation.Text = "OFF"
 	else
 		getgenv().a = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/GPO-AutoOsu.lua"))()
 		Activation.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 		Activation.Text = "ON"
 	end
