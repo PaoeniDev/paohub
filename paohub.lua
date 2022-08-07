@@ -1,6 +1,13 @@
 -- Core
 local player = game.Players.LocalPlayer
 local char = player.Character
+local mouse = player:GetMouse()
+if not char or not char.Parent then
+   char = player.CharacterAdded:wait()
+end
+player.CharacterAdded:Connect(function(character)
+   char = character
+end)
 if not player:FindFirstChild("PaoHub") then
    error("Dont bypasing code!")
    return;
@@ -8,7 +15,7 @@ end
 
 -- Init
 local UserInputService = game:GetService("UserInputService")
-local DiscordLib = loadstring(game:HttpGet "https://pastebin.com/raw/SwYK8BEJ")()
+local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/PaoBlox/paohub/main/discordui.lua")()
 local Window = DiscordLib:Window("Pao Hub")
 local Server = Window:Server("Pao Hub", "")
 
@@ -88,8 +95,8 @@ local Hide = Main:Bind(
 )
 
 local AntiAFK = Main:Button(
-   "Anti AFK",
-   function()
+   "Anti AFK (Non-Active)",
+   function(btn)
       local success, errorMessage = pcall(function()
          local vu = game:GetService("VirtualUser")
 			game:GetService("Players").LocalPlayer.Idled:Connect(function()
@@ -101,9 +108,15 @@ local AntiAFK = Main:Button(
       end)
       if success then
          basicMsg("Anti AFK Successfully Active")
+         btn.Text = "Anti AFK (Active)"
+         _G.AntiAFKAKTIF = true
       end
    end
 )
+
+if _G.AntiAFKAKTIF then
+   AntiAFK.Text = "Anti AFK (Active)"
+end
 
 local FPSLimit = Main:Textbox(
    "Set FPS Limit",
@@ -149,6 +162,74 @@ local JumpPower = Main:Slider(
    end
 )
 
+local ESP = Main:Button(
+   "Player ESP (Non-Active)",
+   function(btn)
+      local success, errorMessage = pcall(function()
+         if _G.ESPAKTIF == false then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/PaoBlox/paohub/main/esp.lua'))()
+         end
+      end)
+      if success then
+         basicMsg("Anti AFK Successfully Active")
+         btn.Text = "Anti AFK (Active)"
+         _G.ESPAKTIF = true
+      else
+         errorMsg("Error while execute script!")
+      end
+   end
+)
+
+local TPKey = Main:Bind(
+   "Click + Key Teleport (Keybind)",
+   Enum.KeyCode.V,
+   function()
+      
+   end
+)
+
+Main:Toggle(
+   "Click + Key Teleport (Toggle)",
+   false,
+   function(toggle)
+      _G.tpactive = toggle
+   end
+)
+
+local ClickDeleteKey = Main:Bind(
+   "Click + Key Delete (Keybind)",
+   Enum.KeyCode.R,
+   function()
+      
+   end
+)
+
+Main:Toggle(
+   "Click + Key Delete (Toggle)",
+   false,
+   function(toggle)
+      _G.dcactive = toggle
+   end
+)
+
+if _G.ESPAKTIF then
+   ESP.Text = "Player ESP (Active)"
+end
+
+local function isKeyDown(key)
+	return UserInputService:IsKeyDown(key)
+end
+
+mouse.Button1Down:Connect(function()
+   if isKeyDown(TPKey:Key()) and _G.tpactive then
+      char:MoveTo(mouse.Hit.p)
+   end
+   if isKeyDown(ClickDeleteKey:Key()) and _G.dcactive then
+      local obj = mouse.Target
+      obj:Destroy()
+   end
+end)
+
 -- Other
 local Other = Window:Server("Other", "http://www.roblox.com/asset/?id=6031075938")
 local reportScript = Other:Channel("Report Script Error")
@@ -159,9 +240,26 @@ reportScript:Textbox(
    function(scriptName)
       local success, errorMessage = pcall(function()
          Webhook("Report Script", "Error Script: "..scriptName)
+         basicMsg("Script Error has been reported!")
       end)
       if not success then
          errorMsg("Error to send!")
+      end
+   end
+)
+
+local suggestGame = Other:Channel("Suggest Game")
+suggestGame:Textbox(
+   "Suggest Game",
+   "Name of the Game:",
+   true,
+   function(gameName)
+      local success, errorMessage = pcall(function()
+         Webhook("Suggest Game", "Suggested Game: "..gameName)
+         basicMsg("Thanks for the suggestion!")
+      end)
+      if not success then
+         errorMsg("Error to send suggest!")
       end
    end
 )
