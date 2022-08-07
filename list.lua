@@ -131,6 +131,10 @@ _G.ScriptTable = {
         {
            Show = "LeadMarker [PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"
+        },
+        {
+           Show = "Auto Spin Clan / Family [PC & Mobile | Recommend ]",
+           Link = "https://raw.githubusercontent.com/PaoBlox/paohub/main/paoautospinps.lua"
         }
      }
  }
