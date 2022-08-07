@@ -29,7 +29,7 @@ local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Top.Name = "Top"
