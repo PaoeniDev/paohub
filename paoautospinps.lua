@@ -330,6 +330,11 @@ Activation.MouseButton1Click:Connect(function()
 	end
 end)
 
+CloseGUI.MouseButton1Click:Connect(function()
+	_G.paoautospin = false
+	ScreenGui:Destroy()
+end)
+
 while wait() do
 	if _G.paoautospin then
 		if game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Clan.Value == _G.paoclan1 then
