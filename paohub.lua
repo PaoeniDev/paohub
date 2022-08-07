@@ -1,4 +1,5 @@
 -- Core
+local ver = "1.0"
 local player = game.Players.LocalPlayer
 local char = player.Character
 local mouse = player:GetMouse()
@@ -18,6 +19,7 @@ local UserInputService = game:GetService("UserInputService")
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/PaoBlox/paohub/main/discordui.lua")()
 local Window = DiscordLib:Window("Pao Hub")
 local Server = Window:Server("Pao Hub", "")
+print("Loaded PaoHub v"..ver)
 
 -- Game & Script List
 local success, list = pcall(function()
@@ -209,6 +211,13 @@ Main:Toggle(
    false,
    function(toggle)
       _G.dcactive = toggle
+   end
+)
+
+Main:Button(
+   "Save Game / Instance",
+   function(btn)
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/PaoBlox/paohub/main/savegame.lua"))()
    end
 )
 
