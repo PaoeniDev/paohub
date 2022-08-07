@@ -1,4 +1,6 @@
 local DiscordLib = {}
+local ver = "1.0"
+print("Load UI Library v"..ver)
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
