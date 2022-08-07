@@ -149,5 +149,6 @@ _G.ScriptTable = {
     { name = "Anime Dimension Simulator", id = 1 },
     { name = "Mining Simulator 2", id = 9551640993 },
     { name = "Combat Warrior", id = 1 },
+    { name = "Project Slayers", id = 5956785391 },
     { name = "Project Slayers", id = 6152116144 }
  }
