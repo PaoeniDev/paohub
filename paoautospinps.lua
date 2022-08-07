@@ -347,7 +347,7 @@ while wait() do
 					_G.paoautospin = false
 				else
 					local args = {[1] = "check_can_spin"}
-					game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_InitiateS:InvokeServer(unpack(args))
+					game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
 					wait(_G.paospeed)
 				end
 			end
