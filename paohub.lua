@@ -1,5 +1,5 @@
 -- Core
-local ver = "1.0"
+local ver = "1.1"
 local player = game.Players.LocalPlayer
 local char = player.Character
 local mouse = player:GetMouse()
@@ -214,12 +214,16 @@ Main:Toggle(
    end
 )
 
-Main:Button(
-   "Save Game / Instance",
-   function(btn)
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/PaoBlox/paohub/main/savegame.lua"))()
-   end
+pcall(function()
+   if KRNL_LOADED then
+      Main:Button(
+         "Save Game / Instance",
+         function(btn)
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/PaoBlox/paohub/main/savegame.lua"))()
+         end
 )
+   end
+end)
 
 if _G.ESPAKTIF then
    ESP.Text = "Player ESP (Active)"
