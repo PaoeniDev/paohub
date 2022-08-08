@@ -1,3 +1,7 @@
+--Check
+repeat wait()
+until game:IsLoaded()
+
 -- Core
 local ver = "1.1"
 local player = game.Players.LocalPlayer
