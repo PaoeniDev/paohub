@@ -3,7 +3,7 @@ repeat wait()
 until game:IsLoaded()
 
 -- Core
-local ver = "1.1"
+local ver = "1.2"
 local player = game.Players.LocalPlayer
 local char = player.Character
 local mouse = player:GetMouse()
@@ -20,9 +20,10 @@ end
 
 -- Init
 local UserInputService = game:GetService("UserInputService")
+local PaoLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/PaoBlox/paohub/main/tplowerserver.lua")()
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/PaoBlox/paohub/main/discordui.lua")()
 local Window = DiscordLib:Window("Pao Hub")
-local Server = Window:Server("Pao Hub", "")
+local Server = Window:Server("Pao Hub", "http://www.roblox.com/asset/?id=10173339222")
 print("Loaded PaoHub v"..ver)
 
 -- Game & Script List
@@ -36,21 +37,27 @@ local ScriptTable = _G.ScriptTable
 local GameTable = _G.GameTable
 
 -- Basic Function
-local function Webhook(title, message)
+local function Webhook(title, message, type)
+   local color
+   if type == "Basic" then
+      color = 5763719
+   else
+      color = 15548997
+   end
    local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
    KRNL_LOADED and "Krnl" or
    SONA_LOADED and "Sona" or
    "Kid with shit exploit"
-   local url = "https://discord.com/api/webhooks/995558538422272121/UXBv9tILwqwt1fLhKyfzqBj2os8hQTufvFRT4TrD6w5ZDmXG79sehDkIGRDb5zX9qAOM"
+   local url = "https://discord.com/api/webhooks/1007552904665763861/-onOmuGUUB--3j0gfsM38mah5Qwyz_zsOnsmeOOlgCwXP7ZhsETBaP3Fzqp_nUhJaUa8"
    local data = {
    ["embeds"] = {{
       ["author"] = {
          ["name"] = title,
          ["icon_url"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..player.UserId.."&width=100&height=100&format=png"
      },
-     ["color"] = tonumber(0xFF1100),
+     ["color"] = color,
      ["fields"] = {
       {
       ["name"] = "Player Name:",
@@ -229,6 +236,19 @@ pcall(function()
    end
 end)
 
+Main:Button(
+   "Teleport to Lower Server",
+   function()
+      local success, errorMessage = pcall(function()
+         PaoLib:TeleportLS()
+      end)
+      if not success then
+         errorMsg("Error when Teleporting!")
+         error(errorMessage)
+      end
+   end
+)
+
 if _G.ESPAKTIF then
    ESP.Text = "Player ESP (Active)"
 end
@@ -256,7 +276,7 @@ reportScript:Textbox(
    true,
    function(scriptName)
       local success, errorMessage = pcall(function()
-         Webhook("Report Script", "Error Script: "..scriptName)
+         Webhook("Report Script", "Error Script: "..scriptName, "Error")
          basicMsg("Script Error has been reported!")
       end)
       if not success then
@@ -272,7 +292,7 @@ suggestGame:Textbox(
    true,
    function(gameName)
       local success, errorMessage = pcall(function()
-         Webhook("Suggest Game", "Suggested Game: "..gameName)
+         Webhook("Suggest Game", "Suggested Game: "..gameName, "Basic")
          basicMsg("Thanks for the suggestion!")
       end)
       if not success then
