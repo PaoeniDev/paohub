@@ -152,6 +152,12 @@ _G.ScriptTable = {
            Show = "Black GUI [ PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/EraOfAlthea"
         }
+     },
+     ["A Universal Time"] = {
+        {
+           Show = "Spotify Hub [ PC & Mobile | Recommend ]",
+           Link = "https://raw.githubusercontent.com/ewyzu/Spotify-Scripts/main/A-Universal-Time"
+        }
      }
  }
  
@@ -172,5 +178,7 @@ _G.ScriptTable = {
     { name = "Project Slayers", id = 5956785391 },
     { name = "Project Slayers", id = 6152116144 },
     { name = "Sea Piece", id = 9744597824 },
-    { name = "Era Of Althea", id = 9840387028 }
+    { name = "Era Of Althea", id = 9840387028 },
+    { name = "A Universal Time", id = 5130598377 },
+    { name = "A Universal Time", id = 6846458508 }
  }
