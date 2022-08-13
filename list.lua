@@ -15,16 +15,16 @@ _G.ScriptTable = {
        {
           Show = "Ripper Hub [ PC | Recommend ]",
           Link = "https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/Kaitun.txt"
-       },
-       {
-          Show = "Chiba Hub [ Mobile & PC | Recommend ]",
-          Link = "https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt"
        }
     },
     ["Demon Fall"] = {
        {
           Show = "Ghost Fall [ Recommend ]",
           Link = "https://raw.githubusercontent.com/ghost-home/public/main/demonfall.lua"
+       },
+       {
+          Show = "Noob HUB [ Recommend ]",
+          Link = "https://raw.githubusercontent.com/NOOBHUBX/DemonFall/main/NOOB%20HUB.Lua"
        }
     },
     ["Goal Kick Simulator"] = {
