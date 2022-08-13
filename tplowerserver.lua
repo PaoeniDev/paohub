@@ -11,7 +11,7 @@ if not File then
     table.insert(AllIDs, actualHour)
     writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
 end
-function PaoLib:TPReturner()
+function PaoLib:TPLSReturner()
     local Site;
     if foundAnything == "" then
         Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
@@ -57,12 +57,12 @@ function PaoLib:TPReturner()
     end
 end
 
-function PaoLib:Teleport()
+function PaoLib:TeleportLS()
     while wait() do
         pcall(function()
-            self:TPReturner()
+            self:TPLSReturner()
             if foundAnything ~= "" then
-                self:TPReturner()
+                self:TPLSReturner()
             end
         end)
     end
