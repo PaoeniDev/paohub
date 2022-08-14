@@ -29,7 +29,7 @@ _G.ScriptTable = {
     },
     ["Goal Kick Simulator"] = {
        {
-          Show = "Soggyware Hub [ PC | Recommend]",
+          Show = "Soggyware Hub [ PC | Recommend ]",
           Link = "https://raw.githubusercontent.com/SunkenMuch/Soggyware/main/Main"
        },
        {
@@ -43,31 +43,31 @@ _G.ScriptTable = {
     },
     ["Arsenal"] = {
        {
-          Show = "OwlHub [ PC | Recommend]",
+          Show = "OwlHub [ PC | Recommend ]",
           Link = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"
        },
        {
-          Show = "Dark Hub [ PC]",
+          Show = "Dark Hub [ PC ]",
           Link = "https://darkhub.xyz/remote-script.lua"
        },
        {
-          Show = "Dex Hub [ PC]",
+          Show = "Dex Hub [ PC ]",
           Link = "https://raw.githubusercontent.com/HonestlyDex/DexHub/main/V3.lua"
        }
     },
     ["King Legacy"] = {
        {
-          Show = "Mukuro [ PC | Recommend]",
+          Show = "Mukuro [ PC | Recommend ]",
           Link = "https://raw.githubusercontent.com/xQuartyx/DonateMe/main/KL"
        }
     },
     ["Your Bizzare Adventure"] = {
        {
-          Show = "Bitch Boy [ PC | Recommend]",
+          Show = "Bitch Boy [ PC | Recommend ]",
           Link = "https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"
        },
        {
-        Show = "YBA GUI REWRITE [ PC | Recommend]",
+        Show = "YBA GUI REWRITE [ PC | Recommend ]",
         Link = "https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"
         }
     },
@@ -77,7 +77,7 @@ _G.ScriptTable = {
            Link = "https://raw.githubusercontent.com/Jakekill871/public-scripts/master/GrandPieceOnlineGUI"
         },
         {
-         Show = "CFA Hub [ PC | Recommend]",
+         Show = "CFA Hub [ PC | Recommend ]",
          Link = "https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"
         },
         {
