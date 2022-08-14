@@ -3,7 +3,7 @@ repeat wait()
 until game:IsLoaded()
 
 -- Core
-local ver = "1.2"
+local ver = "1.2.5"
 local player = game.Players.LocalPlayer
 local char = player.Character
 local mouse = player:GetMouse()
@@ -311,8 +311,11 @@ local function addScript(name, channel)
             local success, errorMessage = pcall(function()
                loadstring(game:HttpGet(v.Link))()
             end)
-            if not success then
-               DiscordLib:Notification("Notification", "Error while execute script! Send this error to Pao#8691", "Okay!")
+            if success then
+               return;
+            else
+               errorMsg("Error while execute script! Send this error to Pao#8691")
+               --DiscordLib:Notification("Notification", "Error while execute script! Send this error to Pao#8691", "Okay!")
             end
          end
       )
