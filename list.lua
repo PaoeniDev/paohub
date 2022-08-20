@@ -155,8 +155,16 @@ _G.ScriptTable = {
      },
      ["A Universal Time"] = {
         {
-           Show = "Spotify Hub [ PC & Mobile | Recommend ]",
-           Link = "https://raw.githubusercontent.com/ewyzu/Spotify-Scripts/main/A-Universal-Time"
+           Show = "Lazy Hub [ PC & Mobile | Recommend ]",
+           Link = "https://raw.githubusercontent.com/LioK251/RbScripts/main/lazyhub.lua"
+        },
+        {
+           Show = "Muz's Hub [ PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/muzrblx/nanocores/main/Loader/HubLoader.lua"
+        },
+        {
+           Show = "Kranzyo [ PC | Recommend ]",
+           Link = "https://raw.githubusercontent.com/Kranzyo/Scripts/main/aut%20autofarm.lua"
         }
      }
  }
