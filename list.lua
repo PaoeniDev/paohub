@@ -165,6 +165,10 @@ _G.ScriptTable = {
         {
            Show = "Kranzyo [ PC | Recommend ]",
            Link = "https://raw.githubusercontent.com/Kranzyo/Scripts/main/aut%20autofarm.lua"
+        },
+        {
+           Show = "Pao SC [ PC & Mobile | Recommend ]",
+           Link = "https://raw.githubusercontent.com/PaoBlox/paohub/main/paosc_aut.lua"
         }
      }
  }
