@@ -3,7 +3,7 @@ repeat wait()
 until game:IsLoaded()
 
 -- Core
-local ver = "1.2.5"
+local ver = "1.3"
 local player = game.Players.LocalPlayer
 local char = player.Character
 local mouse = player:GetMouse()
@@ -249,6 +249,19 @@ Main:Button(
    end
 )
 
+Main:Button(
+   "Rejoin",
+   function()
+      local success, errorMessage = pcall(function()
+         PaoLib:Rejoin()
+      end)
+      if not success then
+         errorMsg("Error when Teleporting!")
+         error(errorMessage)
+      end
+   end
+)
+
 if _G.ESPAKTIF then
    ESP.Text = "Player ESP (Active)"
 end
@@ -312,9 +325,10 @@ local function addScript(name, channel)
                loadstring(game:HttpGet(v.Link))()
             end)
             if success then
-               return;
+               return print("Successfully Execute a Script!")
             else
                errorMsg("Error while execute script! Send this error to Pao#8691")
+               return error(errorMessage)
                --DiscordLib:Notification("Notification", "Error while execute script! Send this error to Pao#8691", "Okay!")
             end
          end
