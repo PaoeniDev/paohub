@@ -1,4 +1,4 @@
-if game:GetService("CoreGui"):FindFirstChild("Pao Lib") then
+if game:GetService("CoreGui"):FindFirstChild("PaoLib") then
 	game:GetService("CoreGui"):FindFirstChild("PaoLib"):Destroy()
 end
 
