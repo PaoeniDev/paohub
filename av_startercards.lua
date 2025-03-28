@@ -7,7 +7,7 @@ local CardsFrame = playerGUI.Frames.Modifiers
 
 CardsFrame.VoteTypeLabel:GetPropertyChangedSignal("Visible"):Connect(function()
   if CardsFrame.VoteTypeLabel.Visible == true then
-    for i, v in pairs(CardsFrame.Main) do
+    for i, v in pairs(CardsFrame.Main:GetChildren()) do
       if v:IsA("Frame") then
         print(v.Name)
       end
