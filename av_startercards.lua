@@ -8,7 +8,7 @@ local playerGUI = player:WaitForChild("PlayerGui")
 local CardsFrame = playerGUI.Frames.Modifiers
 local id = math.random(0, 9999)
 
-getfenv().pao_runningID = id
+getgenv().pao_runningID = id
 
 function choose(modifier)
     local args = {
@@ -20,11 +20,11 @@ function choose(modifier)
 end
 
 CardsFrame.VoteTypeLabel:GetPropertyChangedSignal("Visible"):Connect(function()
-    if getfenv().pao_runningID == id and CardsFrame.VoteTypeLabel.Visible == true then
+    if getgenv().pao_runningID == id and CardsFrame.VoteTypeLabel.Visible == true then
 
       local done = false
 
-      for _, p in pairs(getfenv().priority) do
+      for _, p in pairs(getgenv().priority) do
         if done then break end
         for __, v in pairs(CardsFrame.Main:GetChildren()) do
           if v:IsA("Frame") and p == v.Name then
