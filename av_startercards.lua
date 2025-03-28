@@ -21,7 +21,7 @@ end
 
 CardsFrame.VoteTypeLabel:GetPropertyChangedSignal("Visible"):Connect(function()
     if getgenv().pao_runningID == id and CardsFrame.VoteTypeLabel.Visible == true then
-
+      wait(2)
       local done = false
 
       for _, p in pairs(getgenv().priority) do
