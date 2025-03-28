@@ -14,3 +14,5 @@ CardsFrame.VoteTypeLabel:GetPropertyChangedSignal("Visible"):Connect(function()
     end
   end
 end)
+
+print("pao.")
